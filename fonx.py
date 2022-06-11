@@ -11,7 +11,7 @@ def connect():
 
         cur.execute("""
         
-            select * from teachers order by teacherid
+            select * from students
             """,
             
         )
