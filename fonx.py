@@ -93,8 +93,7 @@ date of birth={}""".format(teacher[0][1],teacher[0][2].upper(),teacher[0][3].upp
 
         # cur.execute("""
         #     select * from {}
-        #     """.format(table),
-            
+        #     """.format(table),   
         # )
         # students = cur.fetchall()
         # for all in students:
