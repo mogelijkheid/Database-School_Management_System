@@ -38,8 +38,14 @@ def connect():
         
 
         cur.execute("""
+<<<<<<< HEAD
+        
+            select * from students
+            """,
+=======
             select * from {}
             """.format(table),
+>>>>>>> 42d302e121ab6026412fea558339fff476bda625
             
         )
         # students = cur.fetchall()
