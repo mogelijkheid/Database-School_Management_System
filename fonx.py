@@ -1,30 +1,70 @@
 import psycopg2
 class data:
-        def connect(self):
-               pass
-       
-        
-        def studentlogin(self,student_number,password):
+        def __init__(self,student_number,password):
             self.student_number=student_number
             self.password=password
-            conn = psycopg2.connect(
+            self.conn = psycopg2.connect(
                     host="localhost",
                     database="school",
                     user="postgres",
                     password="1")
 
-            cur = conn.cursor()
-                
-            cur.execute("""
+            self.cur = self.conn.cursor()
+       
+        
+        def studentlogin(self):
+            
+            self.cur.execute("""
             select * from students
             where studentid={} and password_=MD5('{}')
             """.format(self.student_number,self.password),
             )
+<<<<<<< HEAD
             student = cur.fetchall()
             cur.close()
             conn.commit()
             return student
             
+||||||| 1f3f048
+            student = cur.fetchall()
+            cur.close()
+            conn.commit()
+            return student
+        def lessonshow(self,studentid):
+            
+=======
+            self.student = self.cur.fetchall()
+            # self.cur.close()
+            # self.conn.commit()
+            return self.student
+        
+        def lessonshow(self):
+                
+            self.cur.execute("""
+               SELECT l.lessonname from lessons l
+               INNER JOIN lessons_students as ls
+               ON ls.lessonid = l.lessonid 
+               where ls.studentid={}
+            """.format(self.student_number),
+            )
+            self.lessons = self.cur.fetchall()
+            # self.cur.close()
+            # self.conn.commit()
+            return self.lessons
+        
+        def gradeshow(self):
+            self.cur.execute("""
+               SELECT g.midterm , g.final_ from grades g
+               INNER JOIN lessons_students as ls
+               ON ls.gradeid = g.gradeid
+               where ls.studentid={}
+            """.format(self.student_number),
+            )
+            self.grades = self.cur.fetchall()
+            # self.cur.close()
+            # self.conn.commit()
+            return self.grades
+>>>>>>> 0ee7682310d7c2b148ed8bc4d3ed4d3f5bc67e49
             
 #         def teacherlogin():
 #             table=='teachers'

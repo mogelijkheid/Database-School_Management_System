@@ -17,11 +17,13 @@ class StudentWindow(QtWidgets.QMainWindow):
         def student_show (self):        
             self.student_number=self.snumberline.text()
             self.password=self.spasswordline.text()
-            a=fonx.data()
-            self.student=a.studentlogin(self.student_number,self.password)
+            a=fonx.data(self.student_number,self.password)
+            self.student=a.studentlogin()
+            self.lessons=a.lessonshow()
+            self.grades=a.gradeshow()
             if self.student==[]:
-                 self.message.setText("Password or UserName is wrong")
+                 self.message.setText("PASSWORD OR USERNAME IS WRONG")
             else:
-                self.inci=student_information.StudentWindow(self.student)   
+                self.inci=student_information.StudentWindow(self.student,self.lessons,self.grades)   
                 self.inci.show()
                 self.close()

@@ -15,8 +15,6 @@ class EntryWindow(QtWidgets.QMainWindow):
 
     def student_show (self):
         self.inci=student.StudentWindow()
-        a=fonx.data()
-        a.connect()
         self.inci.show()
         self.close()
 
