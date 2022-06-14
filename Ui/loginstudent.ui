@@ -87,6 +87,9 @@ font: 63 10pt &quot;Yu Gothic UI Semibold&quot;;</string>
       <height>31</height>
      </rect>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
     <property name="placeholderText">
      <string>PASSWORD</string>
     </property>
@@ -102,6 +105,32 @@ font: 63 10pt &quot;Yu Gothic UI Semibold&quot;;</string>
     </property>
     <property name="text">
      <string>BACK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="message">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>400</y>
+      <width>461</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
