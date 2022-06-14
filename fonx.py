@@ -5,7 +5,7 @@ def connect():
             host="localhost",
             database="school",
             user="postgres",
-            password="me5842")
+            password="1")
 
         cur = conn.cursor()
         table=input("tablo:")
@@ -30,27 +30,12 @@ def connect():
             where username='{}' and password_=MD5('{}')
             """.format(username,password),
             )
-            teacher = cur.fetchone()
+            teacher = cur.fetchall()
             if teacher==[]:
                 print("sifre yanlıs yada kullanıcı bulunamadı")
             else:
                 print(teacher)        
         
-
-        cur.execute("""
-<<<<<<< HEAD
-        
-            select * from students
-            """,
-=======
-            select * from {}
-            """.format(table),
->>>>>>> 42d302e121ab6026412fea558339fff476bda625
-            
-        )
-        # students = cur.fetchall()
-        # for all in students:
-        #     print(all)   
 
 
         cur.close()
