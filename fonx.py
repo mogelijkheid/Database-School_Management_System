@@ -19,20 +19,6 @@ class data:
             where studentid={} and password_=MD5('{}')
             """.format(self.student_number,self.password),
             )
-<<<<<<< HEAD
-            student = cur.fetchall()
-            cur.close()
-            conn.commit()
-            return student
-            
-||||||| 1f3f048
-            student = cur.fetchall()
-            cur.close()
-            conn.commit()
-            return student
-        def lessonshow(self,studentid):
-            
-=======
             self.student = self.cur.fetchall()
             # self.cur.close()
             # self.conn.commit()
@@ -64,7 +50,6 @@ class data:
             # self.cur.close()
             # self.conn.commit()
             return self.grades
->>>>>>> 0ee7682310d7c2b148ed8bc4d3ed4d3f5bc67e49
             
 #         def teacherlogin():
 #             table=='teachers'
