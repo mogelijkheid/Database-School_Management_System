@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets,uic
 import student
 import teacher
+import fonx
 
 class EntryWindow(QtWidgets.QMainWindow):
     
@@ -9,6 +10,7 @@ class EntryWindow(QtWidgets.QMainWindow):
         uic.loadUi('Ui/entry.ui', self)
         self.StudentButton.clicked.connect(self.student_show)
         self.TeacherButton.clicked.connect(self.teacher_show)
+        
         self.show()
 
     def student_show (self):
