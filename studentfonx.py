@@ -40,10 +40,8 @@ class studentdata:
         
         def gradeshow(self):
             self.cur.execute("""
-               SELECT g.midterm , g.final_ from grades g
-               INNER JOIN lessons_students as ls
-               ON ls.gradeid = g.gradeid
-               where ls.studentid={}
+               SELECT midterm , final_ from lessons_students 
+               where studentid={}
             """.format(self.student_number),
             )
             self.grades = self.cur.fetchall()
