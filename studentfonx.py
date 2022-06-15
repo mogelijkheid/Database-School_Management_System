@@ -126,7 +126,7 @@ class studentdata:
 
 
         
-        def close():
+        def close(self):
             if self.conn is not None:
                 self.conn.close()
                 print('Database connection closed.')
