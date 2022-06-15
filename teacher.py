@@ -18,14 +18,13 @@ class TeacherWindow(QtWidgets.QMainWindow):
         def teacher_show (self):        
             self.username=self.usernameline.text()
             self.password=self.tpasswordline.text()
-            a=teacherfonx.teacherdata(self.username,self.password)
-            self.teacher=a.teacherlogin()
-            self.lessons,self.nolessons=a.teacherlesson()
+            self.a=teacherfonx.teacherdata(self.username,self.password)
+            self.teacher=self.a.teacherlogin()
             # self.grades=a.gradeshow()
             if self.teacher==[]:
                  self.message.setText("PASSWORD OR USERNAME IS WRONG")
             else:
-                self.inci=teacherinformation.TeacherWindow(self.teacher,self.lessons,self.nolessons)   
+                self.inci=teacherinformation.TeacherWindow(self.teacher,self.a)   
                 self.inci.show()
                 self.close()
          
