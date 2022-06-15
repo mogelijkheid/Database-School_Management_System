@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets,uic
 import entry
 import student_information
-import fonx
+import studentfonx
 class StudentWindow(QtWidgets.QMainWindow):
         def __init__(self):
             super(StudentWindow, self).__init__()
@@ -17,7 +17,7 @@ class StudentWindow(QtWidgets.QMainWindow):
         def student_show (self):        
             self.student_number=self.snumberline.text()
             self.password=self.spasswordline.text()
-            a=fonx.data(self.student_number,self.password)
+            a=studentfonx.studentdata(self.student_number,self.password)
             self.student=a.studentlogin()
             self.lessons=a.lessonshow()
             self.grades=a.gradeshow()

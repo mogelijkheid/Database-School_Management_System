@@ -1,5 +1,5 @@
 import psycopg2
-class data:
+class studentdata:
         def __init__(self,student_number,password):
             self.student_number=student_number
             self.password=password
@@ -129,12 +129,7 @@ class data:
 
         
         def close():
-            conn = psycopg2.connect(
-                    host="localhost",
-                    database="school",
-                    user="postgres",
-                    password="me5842")
-            if conn is not None:
-                conn.close()
+            if self.conn is not None:
+                self.conn.close()
                 print('Database connection closed.')
 
