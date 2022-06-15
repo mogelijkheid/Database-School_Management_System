@@ -54,12 +54,13 @@ class teacherdata:
         #     """.format(self.lessonid[0][0],self.teacher[0][0])
         #     )
             
-        def studentlist(self):
+        def studentlist(self,lesson):
+            self.lesson=lesson
             self.cur.execute("""             
               select * from students where studentid in
 (select studentid from lessons_students where lessonid in
-(select lessonid from lessons where lessonname='math'))
-            """.format(self.teacher[0][0])
+(select lessonid from lessons where lessonname='{}'))
+            """.format(self.lesson)
             )
             self.student =self.cur.fetchall()
             return self.student
