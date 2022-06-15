@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets,uic
 import student
 import teacher
-import fonx
+import studentfonx
 
 class EntryWindow(QtWidgets.QMainWindow):
     
