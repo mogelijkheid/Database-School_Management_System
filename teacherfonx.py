@@ -104,7 +104,7 @@ class teacherdata:
             )
             self.studentid =self. cur.fetchall()
             self.cur.execute("""             
-             SELECT midterm,final_,attandance
+             SELECT midterm,final_,attendance
 FROM lessons_students where studentid={} and lessonid={};
             """.format(self.studentid[0][0],self.lessonid[0][0])
             )
@@ -128,6 +128,41 @@ FROM lessons_students where studentid={} and lessonid={};
               delete from lessons_students where lessonid={} and studentid={}
             """.format(self.lessonid[0][0],self.studentid[0][0])
             )
+        def addstd(self,lessonname,studentname):
+            self.lessonname=lessonname
+            self.studentname=studentname
+            self.cur.execute("""             
+              select lessonid from lessons where lessonname='{}'
+            """.format(self.lessonname)
+            )
+            self.lessonid =self. cur.fetchall()
+            self.cur.execute("""             
+              select studentid from students where studentname='{}'
+            """.format(self.studentname)
+            )
+            self.studentid=self.cur.fetchall()
+            self.cur.execute("""             
+              insert into lessons_students (lessonid,studentid,midterm,final_,attandance)
+              values ({},{},null,null,null)
+            """.format(self.lessonid[0][0],self.studentid[0][0])
+            )
+        def editstd(self,studentname,midterm,final_,attendance):
+            self.midterm=midterm
+            self.final_=final_
+            self.attendance=attendance
+            self.studentname=studentname
+            self.cur.execute("""             
+              select studentid from students where studentname='{}'
+            """.format(self.studentname)
+            )
+            self.studentid =self.cur.fetchall()
+            self.cur.execute("""             
+              UPDATE lessons_students
+SET midterm = {}, final_ = {}, attendance={}
+WHERE studentid={};
+            """.format(self.midterm,self.final_,self.attendance,self.studentid[0][0])
+            )
+            
             
         def close_(self):
             self.cur.close()

@@ -14,6 +14,8 @@ class TeacherWindow(QtWidgets.QMainWindow):
             self.ok_button_2.clicked.connect(self.showstd3)
             self.ok_button_3.clicked.connect(self.showstd4)
             self.closebutton.clicked.connect(self.close_)
+            self.add_button_2.clicked.connect(self.add_std)
+            self.edit_button.clicked.connect(self.edit_std)
             self.remove_button_2.clicked.connect(self.remove_)
             self.remove_button.clicked.connect(self.remove_std)
             self.add_button.clicked.connect(self.add_)
@@ -98,7 +100,20 @@ class TeacherWindow(QtWidgets.QMainWindow):
                 self.student_combo_3.addItem(str(self.nostudent[i][1]))
                 
         def add_std(self):
-            pass
+            self.lesson=self.lesson_combo_4.currentText()
+            self.student=self.student_combo_3.currentText()
+            self.a.addstd(self.lesson,self.student)
+            self.student= self.a.studentlist(self.lesson)
+            self.shwlesson()
+            self.showstd4()
+        def edit_std(self):
+            self.student=self.student_combo.currentText()
+            self.midterm_=self.midterm.text()
+            self.final_=self.final_2.text()
+            self.attendance_=self.attendance.text()
+            self.a.editstd(self.student,self.midterm_,self.final_,self.attendance_)
+            self.student= self.a.studentlist(self.lesson)
+            self.showstd2()
         def close_(self):
             self.a.close_()
             self.close()
