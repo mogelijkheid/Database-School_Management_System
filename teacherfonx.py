@@ -142,7 +142,7 @@ FROM lessons_students where studentid={} and lessonid={};
             )
             self.studentid=self.cur.fetchall()
             self.cur.execute("""             
-              insert into lessons_students (lessonid,studentid,midterm,final_,attandance)
+              insert into lessons_students (lessonid,studentid,midterm,final_,attendance)
               values ({},{},null,null,null)
             """.format(self.lessonid[0][0],self.studentid[0][0])
             )
