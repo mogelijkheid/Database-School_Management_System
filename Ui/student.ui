@@ -36,7 +36,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(181, 200, 183);</string>
+     <string notr="true">background-color:rgb(172, 223, 230);</string>
     </property>
     <property name="text">
      <string/>
@@ -45,8 +45,8 @@
    <widget class="QGroupBox" name="Student_information">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>40</y>
+      <x>0</x>
+      <y>0</y>
       <width>800</width>
       <height>600</height>
      </rect>
@@ -63,81 +63,114 @@
       <height>600</height>
      </size>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:  rgb(143, 106, 185);;</string>
+    </property>
     <property name="title">
      <string>Student Information</string>
     </property>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>140</x>
        <y>40</y>
-       <width>55</width>
-       <height>16</height>
+       <width>120</width>
+       <height>30</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Number</string>
+      <string>Number:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>140</x>
        <y>80</y>
-       <width>55</width>
-       <height>16</height>
+       <width>120</width>
+       <height>30</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Name</string>
+      <string>Name:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>140</x>
        <y>120</y>
-       <width>55</width>
-       <height>16</height>
+       <width>120</width>
+       <height>30</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Surname</string>
+      <string>Surname:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>140</x>
        <y>160</y>
-       <width>71</width>
-       <height>16</height>
+       <width>120</width>
+       <height>30</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Date of Birth</string>
+      <string>Date of Birth:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>140</x>
        <y>200</y>
-       <width>55</width>
-       <height>16</height>
+       <width>120</width>
+       <height>30</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Gender</string>
+      <string>Gender:</string>
      </property>
     </widget>
     <widget class="QLabel" name="number_label">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>340</x>
        <y>40</y>
-       <width>461</width>
-       <height>20</height>
+       <width>225</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="font">
@@ -146,85 +179,100 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="surname_label">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>340</x>
        <y>120</y>
-       <width>461</width>
-       <height>20</height>
+       <width>225</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="birth_label">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>340</x>
        <y>160</y>
-       <width>461</width>
-       <height>20</height>
+       <width>225</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="gender_label">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>340</x>
        <y>200</y>
-       <width>461</width>
-       <height>20</height>
+       <width>225</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="name_label">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>340</x>
        <y>80</y>
-       <width>461</width>
-       <height>20</height>
+       <width>225</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QTableWidget" name="term_widget">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>461</width>
-       <height>221</height>
+       <x>50</x>
+       <y>270</y>
+       <width>661</width>
+       <height>238</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);;</string>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>197</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>41</number>
+     </attribute>
      <row>
       <property name="text">
        <string>Lesson1</string>
@@ -266,19 +314,35 @@
       </property>
      </column>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="back_button">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>510</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>BACK</string>
-    </property>
+    <widget class="QPushButton" name="back_button">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>510</y>
+       <width>110</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+     </property>
+     <property name="text">
+      <string>BACK</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

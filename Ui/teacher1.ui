@@ -26,17 +26,26 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(181, 200, 183);</string>
+   <string notr="true">background-color:rgb(172, 223, 230);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="tname_label1">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>101</width>
-      <height>16</height>
+      <x>10</x>
+      <y>20</y>
+      <width>125</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
     </property>
     <property name="text">
      <string>Teacher's name:</string>
@@ -45,24 +54,42 @@
    <widget class="QLabel" name="tname_label">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>0</y>
-      <width>201</width>
-      <height>16</height>
+      <x>135</x>
+      <y>20</y>
+      <width>225</width>
+      <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+    </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>60</y>
       <width>761</width>
       <height>411</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:  rgb(143, 106, 185);
+background-color: rgb(172, 223, 230);</string>
     </property>
     <property name="currentIndex">
      <number>1</number>
@@ -71,15 +98,155 @@
      <attribute name="title">
       <string>Lessons</string>
      </attribute>
+     <widget class="QComboBox" name="lesson_combo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>350</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_button">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>300</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>ADD LESSON</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="lesson_combo_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>350</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(245, 240, 218);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="remove_button_2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>340</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>REMOVE LESSON</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>-6</x>
+        <y>-5</y>
+        <width>761</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
      <widget class="QTableWidget" name="lesson_widget">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>20</y>
-        <width>521</width>
-        <height>221</height>
+        <width>741</width>
+        <height>271</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>179</number>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>23</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>47</number>
+      </attribute>
       <row>
        <property name="text">
         <string>1</string>
@@ -126,29 +293,12 @@
        </property>
       </column>
      </widget>
-     <widget class="QComboBox" name="lesson_combo">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>310</y>
-        <width>351</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="add_button">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>310</y>
-        <width>81</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add Lesson</string>
-      </property>
-     </widget>
+     <zorder>label_2</zorder>
+     <zorder>lesson_combo</zorder>
+     <zorder>add_button</zorder>
+     <zorder>lesson_combo_6</zorder>
+     <zorder>remove_button_2</zorder>
+     <zorder>lesson_widget</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -157,11 +307,20 @@
      <widget class="QComboBox" name="lesson_combo_2">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>100</x>
         <y>10</y>
-        <width>391</width>
-        <height>16</height>
+        <width>350</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_3">
@@ -169,9 +328,17 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>47</width>
-        <height>14</height>
+        <width>71</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Lesson:</string>
@@ -181,10 +348,15 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>40</y>
-        <width>47</width>
-        <height>14</height>
+        <y>50</y>
+        <width>71</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Student:</string>
@@ -193,34 +365,71 @@
      <widget class="QComboBox" name="student_combo">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>40</y>
-        <width>391</width>
-        <height>16</height>
+        <x>100</x>
+        <y>50</y>
+        <width>350</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="show_button">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>441</width>
-        <height>21</height>
+        <x>100</x>
+        <y>90</y>
+        <width>350</width>
+        <height>30</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+      </property>
       <property name="text">
-       <string>Show</string>
+       <string>SHOW STUDENT INFORMATION</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>90</y>
-        <width>111</width>
-        <height>16</height>
+        <y>130</y>
+        <width>120</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Student Name:</string>
@@ -230,10 +439,15 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>110</y>
-        <width>47</width>
-        <height>14</height>
+        <y>170</y>
+        <width>120</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Gender:</string>
@@ -243,10 +457,15 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>130</y>
-        <width>71</width>
-        <height>16</height>
+        <y>210</y>
+        <width>120</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Date of Birth:</string>
@@ -256,10 +475,15 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>150</y>
-        <width>47</width>
-        <height>14</height>
+        <y>250</y>
+        <width>120</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Midterm:</string>
@@ -269,10 +493,15 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>170</y>
-        <width>47</width>
-        <height>14</height>
+        <y>290</y>
+        <width>120</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Final:</string>
@@ -282,10 +511,15 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>190</y>
-        <width>71</width>
-        <height>16</height>
+        <y>330</y>
+        <width>120</width>
+        <height>30</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Attendance:</string>
@@ -295,78 +529,66 @@
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>90</y>
-        <width>111</width>
-        <height>16</height>
+        <y>130</y>
+        <width>225</width>
+        <height>30</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="gender">
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>110</y>
-        <width>111</width>
-        <height>16</height>
+        <y>170</y>
+        <width>225</width>
+        <height>30</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="birth">
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>130</y>
-        <width>121</width>
-        <height>16</height>
+        <y>210</y>
+        <width>225</width>
+        <height>30</height>
        </rect>
       </property>
-      <property name="text">
-       <string>TextLabel</string>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
-     </widget>
-     <widget class="QLabel" name="midterm">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>150</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
       </property>
       <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="final_2">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>170</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="attendance">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>190</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="ok_button">
@@ -374,160 +596,134 @@
        <rect>
         <x>470</x>
         <y>10</y>
-        <width>31</width>
-        <height>21</height>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>SHOW STUDENTS</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="midterm">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>250</y>
+        <width>225</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="final_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>290</y>
+        <width>225</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="attendance">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>330</y>
+        <width>225</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 240, 218);
+color:  rgb(143, 106, 185);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="edit_button">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>330</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>EDIT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>761</width>
+        <height>391</height>
        </rect>
       </property>
       <property name="text">
-       <string>OK</string>
+       <string/>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Edit Student</string>
-     </attribute>
-     <widget class="QLabel" name="label_17">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>47</width>
-        <height>14</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Lesson:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_18">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>47</width>
-        <height>14</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Student:</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="lesson_combo_3">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>10</y>
-        <width>381</width>
-        <height>16</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="student_combo_2">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>30</y>
-        <width>381</width>
-        <height>16</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="show_button_2">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>50</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Show</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_22">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>110</y>
-        <width>61</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Midterm:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_23">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>140</y>
-        <width>47</width>
-        <height>14</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Final:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_24">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>170</y>
-        <width>71</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Attandance:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="final_3">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>140</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="attandance">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>170</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="midterm_2">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>110</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="save_button">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>210</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Save</string>
-      </property>
-     </widget>
+     <zorder>label_11</zorder>
+     <zorder>lesson_combo_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_4</zorder>
+     <zorder>student_combo</zorder>
+     <zorder>show_button</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_10</zorder>
+     <zorder>name</zorder>
+     <zorder>gender</zorder>
+     <zorder>birth</zorder>
+     <zorder>ok_button</zorder>
+     <zorder>midterm</zorder>
+     <zorder>final_2</zorder>
+     <zorder>attendance</zorder>
+     <zorder>edit_button</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -537,8 +733,8 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
-        <width>221</width>
+        <y>70</y>
+        <width>370</width>
         <height>201</height>
        </rect>
       </property>
@@ -550,9 +746,18 @@
         <rect>
          <x>70</x>
          <y>40</y>
-         <width>141</width>
-         <height>22</height>
+         <width>175</width>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(245, 240, 218);
+</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_25">
@@ -560,22 +765,35 @@
         <rect>
          <x>90</x>
          <y>0</y>
-         <width>47</width>
-         <height>14</height>
+         <width>185</width>
+         <height>30</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>Add</string>
+        <string>ADD</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="label_27">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>0</x>
          <y>40</y>
-         <width>47</width>
-         <height>14</height>
+         <width>70</width>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Lesson:</string>
@@ -584,46 +802,104 @@
       <widget class="QLabel" name="label_28">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>80</y>
-         <width>47</width>
-         <height>14</height>
+         <x>0</x>
+         <y>110</y>
+         <width>70</width>
+         <height>30</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>Student:</string>
+        <string>Students:</string>
        </property>
       </widget>
       <widget class="QComboBox" name="student_combo_3">
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>70</y>
-         <width>141</width>
-         <height>22</height>
+         <y>110</y>
+         <width>175</width>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(245, 240, 218);</string>
        </property>
       </widget>
       <widget class="QPushButton" name="add_button_2">
        <property name="geometry">
         <rect>
-         <x>14</x>
-         <y>120</y>
-         <width>191</width>
-         <height>23</height>
+         <x>250</x>
+         <y>110</y>
+         <width>110</width>
+         <height>28</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
        </property>
        <property name="text">
         <string>ADD</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ok_button_3">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>40</y>
+         <width>110</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>SHOW STUDENTS</string>
        </property>
       </widget>
      </widget>
      <widget class="QWidget" name="remove" native="true">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>20</y>
-        <width>211</width>
+        <x>390</x>
+        <y>70</y>
+        <width>370</width>
         <height>201</height>
        </rect>
       </property>
@@ -633,44 +909,75 @@
       <widget class="QLabel" name="label_26">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>90</x>
          <y>0</y>
-         <width>47</width>
-         <height>14</height>
+         <width>185</width>
+         <height>30</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>Remove</string>
+        <string>REMOVE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QComboBox" name="lesson_combo_5">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>70</x>
          <y>40</y>
-         <width>141</width>
-         <height>22</height>
+         <width>170</width>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(245, 240, 218);
+</string>
        </property>
       </widget>
       <widget class="QComboBox" name="student_combo_4">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>70</y>
-         <width>141</width>
-         <height>22</height>
+         <x>70</x>
+         <y>110</y>
+         <width>170</width>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(245, 240, 218);
+</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_29">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>0</x>
          <y>40</y>
-         <width>47</width>
-         <height>14</height>
+         <width>70</width>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Lesson:</string>
@@ -679,32 +986,148 @@
       <widget class="QLabel" name="label_30">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>70</y>
-         <width>47</width>
-         <height>14</height>
+         <x>0</x>
+         <y>110</y>
+         <width>70</width>
+         <height>30</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>Student:</string>
+        <string>Students:</string>
        </property>
       </widget>
       <widget class="QPushButton" name="remove_button">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>120</y>
-         <width>191</width>
-         <height>23</height>
+         <x>250</x>
+         <y>110</y>
+         <width>110</width>
+         <height>28</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
        </property>
        <property name="text">
         <string>REMOVE</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="ok_button_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>40</y>
+         <width>110</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>SHOW STUDENTS</string>
+       </property>
+      </widget>
      </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>-6</x>
+        <y>-5</y>
+        <width>761</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_12</zorder>
+     <zorder>add</zorder>
+     <zorder>remove</zorder>
     </widget>
    </widget>
+   <widget class="QPushButton" name="closebutton">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>510</y>
+      <width>110</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgb(143, 106, 185);
+	color: rgb(245, 240, 218);
+}
+QPushButton::hover{
+	background-color: rgb(115, 80, 139);
+	color: rgb(245, 240, 218);
+}
+QPushButton::pressed{
+	background-color: rgb(81, 65, 108);
+    padding-left:5px;
+	color: rgb(245, 240, 218);
+    padding-top:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>CLOSE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>0</y>
+      <width>821</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>tname_label1</zorder>
+   <zorder>tname_label</zorder>
+   <zorder>closebutton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
