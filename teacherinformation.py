@@ -25,7 +25,11 @@ class TeacherWindow(QtWidgets.QMainWindow):
         
         def add_(self):
             self.lesson=self.lesson_combo.currentText()
-            self.a.addlesson(self.lesson)
+            
+            if self.a.addlesson(self.lesson)==False:
+                self.counterror.setText("the lesson you can teach is full.".upper())
+            else:
+                self.counterror.setText(" ")
             self.lessons,self.nolessons=self.a.teacherlesson()
             self.shwlesson()
             
@@ -53,9 +57,6 @@ class TeacherWindow(QtWidgets.QMainWindow):
             
             for i in range(len(self.nolessons)):
                 self.lesson_combo.addItem(str(self.nolessons[i][1])) 
-                
-                
-                
                 
         def showstd(self):
             self.student_combo.clear()
@@ -102,7 +103,11 @@ class TeacherWindow(QtWidgets.QMainWindow):
         def add_std(self):
             self.lesson=self.lesson_combo_4.currentText()
             self.student=self.student_combo_3.currentText()
-            self.a.addstd(self.lesson,self.student)
+            if self.a.addstd(self.lesson,self.student)==False:
+                self.counterror_2.setText("course capacity is full.".upper())
+            else:
+                self.counterror_2.setText(" ")
+            
             self.student= self.a.studentlist(self.lesson)
             self.shwlesson()
             self.showstd4()

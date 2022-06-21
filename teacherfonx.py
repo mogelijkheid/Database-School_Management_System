@@ -51,6 +51,14 @@ class teacherdata:
             
             self.lessonid=self.cur.fetchall()
             self.cur.execute("""             
+             select count(*) from lessons_teachers where teacherid={}
+            """.format(self.teacher[0][0])
+            )
+            self.countlesson=self.cur.fetchall()
+            if self.countlesson[0][0]==5:
+                  return False
+            else:
+                  self.cur.execute("""             
              insert into lessons_teachers(lessonid,teacherid)
              values ({},{})
             """.format(self.lessonid[0][0],self.teacher[0][0])
@@ -142,8 +150,16 @@ FROM lessons_students where studentid={} and lessonid={};
             )
             self.studentid=self.cur.fetchall()
             self.cur.execute("""             
+             select count(*) from lessons_students where lessonid='{}'
+            """.format(self.lessonid[0][0])
+            )
+            self.countstudent=self.cur.fetchall()
+            if self.countstudent[0][0]==10:
+                  return False
+            else:
+                  self.cur.execute("""             
               insert into lessons_students (lessonid,studentid,midterm,final_,attendance)
-              values ({},{},null,null,null)
+              values ({},{},0,0,0)
             """.format(self.lessonid[0][0],self.studentid[0][0])
             )
         def editstd(self,studentname,midterm,final_,attendance):
