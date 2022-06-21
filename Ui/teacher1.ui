@@ -92,7 +92,7 @@ color:  rgb(143, 106, 185);</string>
 background-color: rgb(172, 223, 230);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -239,7 +239,7 @@ color:  rgb(143, 106, 185);</string>
        <enum>QFrame::Box</enum>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>179</number>
+       <number>239</number>
       </attribute>
       <attribute name="verticalHeaderMinimumSectionSize">
        <number>23</number>
@@ -285,11 +285,6 @@ color:  rgb(143, 106, 185);</string>
       <column>
        <property name="text">
         <string>Capacity</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Class size</string>
        </property>
       </column>
      </widget>
@@ -1073,9 +1068,34 @@ QPushButton::pressed{
        <string/>
       </property>
      </widget>
+     <widget class="QLabel" name="counterror_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:  rgb(143, 106, 185);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
      <zorder>label_12</zorder>
      <zorder>add</zorder>
      <zorder>remove</zorder>
+     <zorder>counterror_2</zorder>
     </widget>
    </widget>
    <widget class="QPushButton" name="closebutton">
@@ -1123,11 +1143,36 @@ QPushButton::pressed{
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="counterror">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>351</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:  rgb(143, 106, 185);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>tabWidget</zorder>
    <zorder>tname_label1</zorder>
    <zorder>tname_label</zorder>
    <zorder>closebutton</zorder>
+   <zorder>counterror</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
