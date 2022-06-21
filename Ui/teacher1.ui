@@ -282,7 +282,7 @@ color:  rgb(143, 106, 185);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>8</pointsize>
+        <pointsize>9</pointsize>
        </font>
       </property>
       <property name="styleSheet">
