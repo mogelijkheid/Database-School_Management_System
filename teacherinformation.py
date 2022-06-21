@@ -27,7 +27,7 @@ class TeacherWindow(QtWidgets.QMainWindow):
             self.lesson=self.lesson_combo.currentText()
             
             if self.a.addlesson(self.lesson)==False:
-                self.counterror.setText("the lesson you can teach is full.".upper())
+                self.counterror.setText("No more lessons can be added".upper())
             else:
                 self.counterror.setText(" ")
             self.lessons,self.nolessons=self.a.teacherlesson()
