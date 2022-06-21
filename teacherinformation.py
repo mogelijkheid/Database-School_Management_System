@@ -36,11 +36,12 @@ class TeacherWindow(QtWidgets.QMainWindow):
         def remove_(self):
             self.lesson=self.lesson_combo_6.currentText()
             self.a.delete_(self.lesson)
+            self.counterror.setText(" ".upper())
             self.lessons,self.nolessons=self.a.teacherlesson()
             self.shwlesson()
             
         def shwlesson(self):
-            self.lesson_widget.clear()
+            self.items_clear()
             self.lesson_combo.clear()
             self.lesson_combo_6.clear()
             self.lesson_combo_2.clear()
@@ -57,7 +58,11 @@ class TeacherWindow(QtWidgets.QMainWindow):
             
             for i in range(len(self.nolessons)):
                 self.lesson_combo.addItem(str(self.nolessons[i][1])) 
-                
+        def items_clear(self):
+            for i in range(5):
+                self.lesson_widget.setItem(i,0,QTableWidgetItem(" "))
+                self.lesson_widget.setItem(i,1,QTableWidgetItem(" "))
+                self.lesson_widget.setItem(i,2,QTableWidgetItem(" "))
         def showstd(self):
             self.student_combo.clear()
             self.lesson=self.lesson_combo_2.currentText()
@@ -89,9 +94,10 @@ class TeacherWindow(QtWidgets.QMainWindow):
         def remove_std(self):
             self.lesson=self.lesson_combo_5.currentText()
             self.student=self.student_combo_4.currentText()
+            self.counterror_2.setText(" ".upper())
             self.a.removestd(self.lesson,self.student)
             self.student= self.a.studentlist(self.lesson)
-            self.shwlesson()
+            
             self.showstd3()
         def showstd4(self):
             self.student_combo_3.clear()
@@ -109,7 +115,6 @@ class TeacherWindow(QtWidgets.QMainWindow):
                 self.counterror_2.setText(" ")
             
             self.student= self.a.studentlist(self.lesson)
-            self.shwlesson()
             self.showstd4()
         def edit_std(self):
             self.student=self.student_combo.currentText()
