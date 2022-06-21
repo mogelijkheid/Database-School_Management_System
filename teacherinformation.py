@@ -19,7 +19,7 @@ class TeacherWindow(QtWidgets.QMainWindow):
             self.remove_button_2.clicked.connect(self.remove_)
             self.remove_button.clicked.connect(self.remove_std)
             self.add_button.clicked.connect(self.add_)
-            self.tname_label.setText(str(self.teacher[0][2].upper()))
+            self.tname_label.setText(str(self.teacher[0][2].upper())+" "+str(self.teacher[0][3].upper()))
             self.shwlesson()
             self.show()
         
